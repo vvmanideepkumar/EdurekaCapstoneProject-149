@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "6093c126-fc4b-414e-aa7b-d32be092ccf7",
+		"name": "HMS-Hotel Management service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28834521"
+	},
+	"item": [
+		{
+			"name": "3.Hotels- get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/v1/hotels/getAllHotels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"hotels",
+						"getAllHotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.Hotels- Check Hotel availabilit",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotelName\": \"reddy brothers\",\r\n    \"roomType\": \"Luxury\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1/hotels/getHotelAvailabilityStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"hotels",
+						"getHotelAvailabilityStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.Add Hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotelName\": \"reddy brothers\",\r\n    \"roomType\": \"Luxury\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1/hotels/createHotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"hotels",
+						"createHotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Update Hotel status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotelName\": \"Taj Faluknama\",\r\n    \"roomType\": \"Luxury\",\r\n    \"reservationStatus\":\"RESERVED\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1/hotels/updateRoomReservationStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"hotels",
+						"updateRoomReservationStatus"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

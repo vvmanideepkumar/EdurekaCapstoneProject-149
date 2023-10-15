@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "292b0edf-4394-4620-9aa2-3deb72ded482",
+		"name": "HMS-ReservationService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28834521"
+	},
+	"item": [
+		{
+			"name": "Book a Room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\":22,\r\n    \"hotelName\":\"hotel subbu\",\r\n    \"roomType\":\"deluxe\",\r\n    \"paymentAmount\":250,\r\n    \"accountNumber\": 123456\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/api/v1/reservation/reserveRoom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"v1",
+						"reservation",
+						"reserveRoom"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
